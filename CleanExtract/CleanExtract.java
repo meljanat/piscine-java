@@ -1,6 +1,6 @@
 public class CleanExtract {
     public static String extract(String s) {
-        String[] parts = s.split("|");
+        String[] parts = s.split("\\|");
         String res = "";
         for (int i = 0; i < parts.length; i++) {
             int firstPnt = parts[i].indexOf(".");
