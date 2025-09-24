@@ -11,6 +11,11 @@ public class Star extends CelestialObject {
         this.magnitude = magnitude;
     }
 
+    public Star() {
+        super();
+        this.magnitude = 1.0;
+    }
+
     public Star(String name, double x, double y, double z, double magnitude) {
         super(name, x, y, z);
         this.magnitude = magnitude;
