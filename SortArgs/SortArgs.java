@@ -7,6 +7,6 @@ public class SortArgs {
         }
         Arrays.sort(args);
         String res = String.join(" ", args);
-        System.out.println(res + "\n");
+        System.out.println(res);
     }
 }
