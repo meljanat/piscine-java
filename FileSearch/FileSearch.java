@@ -1,5 +1,4 @@
 import java.io.File;
-import java.io.IOException;
 
 public class FileSearch {
     public static String searchFile(String fileName) {
@@ -7,7 +6,7 @@ public class FileSearch {
         return searchInside(fileName, currentDir);
     }
 
-    public static String searchInside(String fileName, String directory) throws IOException {
+    public static String searchInside(String fileName, String directory) {
         File dir = new File(directory);
         File[] files = dir.listFiles();
         if (files != null) {
