@@ -4,11 +4,10 @@ public class CelestialObject {
     public double y;
     public double z;
 
-    public CelestialObject CelestialObject(String name, double x, double y, double z) {
+    public CelestialObject(String name, double x, double y, double z) {
         this.name = name;
         this.x = x;
         this.y = y;
         this.z = z;
-        return this;
     }
 }
