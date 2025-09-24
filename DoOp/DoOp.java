@@ -1,6 +1,6 @@
 public class DoOp {
     public static String operate(String[] args) {
-        if (args == null || args.length != 3) {
+        if (args == null) {
             return "it depend on the input.";
         }
         int first_op = Integer.parseInt(args[0]);
