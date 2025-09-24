@@ -12,12 +12,12 @@ public class FileSearch {
         if (files != null) {
             for (File file : files) {
                 if (file.isDirectory()) {
-                    String result = searchInside(fileName, file.getAbsolutePath());
+                    String result = searchInside(fileName, file.getPath());
                     if (result != null) {
                         return result;
                     }
                 } else if (file.getName().equals(fileName)) {
-                    return file.getAbsolutePath();
+                    return file.getPath();
                 }
             }
         }
