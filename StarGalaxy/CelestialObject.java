@@ -2,9 +2,7 @@ import java.util.Objects;
 
 public class CelestialObject {
     public String name;
-    public double x;
-    public double y;
-    public double z;
+    public double x, y, z;
     public int mass;
 
     public CelestialObject() {
@@ -38,7 +36,7 @@ public class CelestialObject {
         this.z = z;
     }
 
-    public void setMass(Integer mass) {
+    public void setMass(int mass) {
         this.mass = mass;
     }
 

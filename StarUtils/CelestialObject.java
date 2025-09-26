@@ -39,7 +39,7 @@ public class CelestialObject {
         this.z = z;
     }
 
-    public void setMass(Integer mass) {
+    public void setMass(int mass) {
         this.mass = mass;
     }
 

@@ -5,6 +5,14 @@ public class CelestialObject {
     public double z;
     public int mass;
 
+    public int getMass() {
+        return mass;
+    }
+
+    public void setMass(int mass) {
+        this.mass = mass;
+    }
+
     public CelestialObject() {
         this.name = "Soleil";
         this.x = 0.0;
