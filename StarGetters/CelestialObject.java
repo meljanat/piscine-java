@@ -3,12 +3,14 @@ public class CelestialObject {
     public double x;
     public double y;
     public double z;
+    public Integer mass;
 
     public CelestialObject() {
         this.name = "Soleil";
         this.x = 0.0;
         this.y = 0.;
         this.z = .0;
+        this.mass = 0;
     }
 
     public CelestialObject(String name, double x, double y, double z) {
@@ -16,6 +18,7 @@ public class CelestialObject {
         this.x = x;
         this.y = y;
         this.z = z;
+        this.mass = 0;
     }
 
     public void setName(String name) {
