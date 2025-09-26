@@ -14,11 +14,12 @@ public class CelestialObject {
         this.z = .0;
     }
 
-    public CelestialObject(String name, double x, double y, double z) {
+    public CelestialObject(String name, double x, double y, double z, Integer mass) {
         this.name = name;
         this.x = x;
         this.y = y;
         this.z = z;
+        this.mass = mass;
     }
 
     public void setName(String name) {
