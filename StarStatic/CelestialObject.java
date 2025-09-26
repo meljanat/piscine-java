@@ -3,7 +3,7 @@ public class CelestialObject {
     public double x;
     public double y;
     public double z;
-    public Integer mass;
+    public int mass;
 
     public CelestialObject() {
         this.name = "Soleil";

@@ -3,7 +3,7 @@ public class CelestialObject {
     public double x;
     public double y;
     public double z;
-    public Integer mass;
+    public int mass;
 
     public CelestialObject() {
         this.name = "Soleil";
@@ -13,11 +13,11 @@ public class CelestialObject {
         this.mass = 0;
     }
 
-    public CelestialObject(String name, double x, double y, double z) {
+    public CelestialObject(String name, double x, double y, double z, int mass) {
         this.name = name;
         this.x = x;
         this.y = y;
         this.z = z;
-        this.mass = 0;
+        this.mass = mass;
     }
 }
