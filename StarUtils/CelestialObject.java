@@ -12,6 +12,7 @@ public class CelestialObject {
         this.x = 0.0;
         this.y = 0.;
         this.z = .0;
+        this.mass = 0;
     }
 
     public CelestialObject(String name, double x, double y, double z, Integer mass) {
