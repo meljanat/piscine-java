@@ -5,7 +5,6 @@ public class CelestialObject {
     public double x;
     public double y;
     public double z;
-    public Integer mass;
 
     public CelestialObject() {
         this.name = "Soleil";
@@ -37,10 +36,6 @@ public class CelestialObject {
         this.z = z;
     }
 
-    public void setMass(Integer mass) {
-        this.mass = mass;
-    }
-
     public String getName() {
         return this.name;
     }
@@ -55,10 +50,6 @@ public class CelestialObject {
 
     public double getZ() {
         return this.z;
-    }
-
-    public Integer getMass() {
-        return this.mass;
     }
 
     public static double getDistanceBetween(CelestialObject obj1, CelestialObject obj2) {
