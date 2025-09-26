@@ -15,7 +15,7 @@ public class CelestialObject {
         this.mass = 0;
     }
 
-    public CelestialObject(String name, double x, double y, double z, Integer mass) {
+    public CelestialObject(String name, double x, double y, double z, int mass) {
         this.name = name;
         this.x = x;
         this.y = y;
