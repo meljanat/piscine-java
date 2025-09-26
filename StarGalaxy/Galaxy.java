@@ -1,34 +1,28 @@
 import java.util.*;
 
 public class Galaxy {
-    private List<CelestialObject> celestialObjects;
-
-    public Galaxy() {
-        this.celestialObjects = new ArrayList<>();
-    }
-
-    public List<CelestialObject> getCelestialObjects() {
-        return celestialObjects;
-    }
+    private List<CelestialObject> objects = new ArrayList<>();
 
     public void addCelestialObject(CelestialObject obj) {
-        this.celestialObjects.add(obj);
+        objects.add(obj);
     }
 
     public Map<String, Integer> computeMassRepartition() {
-        Map<String, Integer> massRepartition = new java.util.HashMap<>();
-        massRepartition.put("Star", 0);
-        massRepartition.put("Planet", 0);
-        massRepartition.put("Other", 0);
-        for (CelestialObject obj : celestialObjects) {
+        Map<String, Integer> repartition = new HashMap<>();
+        repartition.put("Star", 0);
+        repartition.put("Planet", 0);
+        repartition.put("Other", 0);
+
+        for (CelestialObject obj : objects) {
             if (obj instanceof Star) {
-                massRepartition.put("Star", massRepartition.get("Star") + obj.getMass());
+                repartition.put("Star", repartition.get("Star") + (int) obj.getMass());
             } else if (obj instanceof Planet) {
-                massRepartition.put("Planet", massRepartition.get("Planet") + obj.getMass());
+                repartition.put("Planet", repartition.get("Planet") + (int) obj.getMass());
             } else {
-                massRepartition.put("Other", massRepartition.get("Other") + obj.getMass());
+                repartition.put("Other", repartition.get("Other") + (int) obj.getMass());
             }
         }
-        return massRepartition;
+
+        return repartition;
     }
 }
