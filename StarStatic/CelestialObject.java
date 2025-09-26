@@ -3,7 +3,7 @@ public class CelestialObject {
     public double x;
     public double y;
     public double z;
-    public int mass;
+    private int mass;
 
     public int getMass() {
         return mass;

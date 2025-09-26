@@ -3,7 +3,7 @@ import java.util.Objects;
 public class CelestialObject {
     public String name;
     public double x, y, z;
-    public int mass;
+    private int mass;
 
     public CelestialObject() {
         this.name = "Soleil";
