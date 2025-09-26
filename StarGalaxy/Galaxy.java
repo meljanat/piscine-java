@@ -1,10 +1,18 @@
 import java.util.*;
 
 public class Galaxy {
-    private List<CelestialObject> objects = new ArrayList<>();
+    private List<CelestialObject> celestialObjects = new ArrayList<>();
+
+    public Galaxy() {
+        this.celestialObjects = new ArrayList<>();
+    }
+
+    public List<CelestialObject> getCelestialObjects() {
+        return celestialObjects;
+    }
 
     public void addCelestialObject(CelestialObject obj) {
-        objects.add(obj);
+        this.celestialObjects.add(obj);
     }
 
     public Map<String, Integer> computeMassRepartition() {
@@ -13,7 +21,7 @@ public class Galaxy {
         repartition.put("Planet", 0);
         repartition.put("Other", 0);
 
-        for (CelestialObject obj : objects) {
+        for (CelestialObject obj : celestialObjects) {
             if (obj instanceof Star) {
                 repartition.put("Star", repartition.get("Star") + (int) obj.getMass());
             } else if (obj instanceof Planet) {
@@ -22,7 +30,6 @@ public class Galaxy {
                 repartition.put("Other", repartition.get("Other") + (int) obj.getMass());
             }
         }
-
         return repartition;
     }
 }
