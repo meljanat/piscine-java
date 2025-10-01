@@ -26,6 +26,13 @@ public class Character {
         return name;
     }
 
+    public void updateHealth(int amount) {
+        currentHealth += amount;
+        if (currentHealth > maxHealth) {
+            currentHealth = maxHealth;
+        }
+    }
+
     @Override
     public String toString() {
         if (currentHealth > 0) {
