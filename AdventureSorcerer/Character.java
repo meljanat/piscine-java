@@ -26,8 +26,8 @@ public class Character {
         return name;
     }
 
-    public void updateHealth(int amount) {
-        currentHealth += amount;
+    public void setHealth(int newHealth) {
+        currentHealth = newHealth; 
         if (currentHealth > maxHealth) {
             currentHealth = maxHealth;
         }

@@ -1,5 +1,5 @@
 public class Sorcerer extends Character implements Healer {
-    private int healCapacity;
+    private final int healCapacity;
 
     Sorcerer(String name, int maxHealth, int healCapacity) {
         super(name, maxHealth);
@@ -13,7 +13,7 @@ public class Sorcerer extends Character implements Healer {
 
     @Override
     public void heal(Character target) {
-        target.updateHealth(healCapacity);
+        target.setHealth(target.getCurrentHealth() + healCapacity);
     }
 
     @Override
