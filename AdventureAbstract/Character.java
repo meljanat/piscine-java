@@ -26,7 +26,7 @@ public abstract class Character {
         return name;
     }
 
-    public void setCurrentHealth(int newHealth) {
+    protected void setCurrentHealth(int newHealth) {
         currentHealth = newHealth;
         if (currentHealth > maxHealth) {
             currentHealth = maxHealth;
