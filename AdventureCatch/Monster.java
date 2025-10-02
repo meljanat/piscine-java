@@ -4,12 +4,20 @@ public class Monster extends Character {
     }
 
     @Override
-    public void attack(Character target) {
+    public void attack(Character target) throws DeadCharacterException {
         if (this.getWeapon() != null) {
-            target.takeDamage(this.getWeapon().getDamage());
+            try {
+                target.takeDamage(this.getWeapon().getDamage());
+            } catch (DeadCharacterException e) {
+                throw new DeadCharacterException(target);
+            }
             return;
         }
-        target.takeDamage(7);
+        try {
+            target.takeDamage(7);
+        } catch (DeadCharacterException e) {
+            throw new DeadCharacterException(target);
+        }
     }
 
     @Override

@@ -7,16 +7,25 @@ public class Sorcerer extends Character implements Healer {
     }
 
     @Override
-    public void attack(Character target) {
+    public void attack(Character target) throws DeadCharacterException {
         try {
             heal(this);
         } catch (DeadCharacterException e) {
+            throw new DeadCharacterException(this);
         }
         if (this.getWeapon() != null) {
-            target.takeDamage(this.getWeapon().getDamage());
+            try {
+                target.takeDamage(this.getWeapon().getDamage());
+            } catch (DeadCharacterException e) {
+                throw new DeadCharacterException(target);
+            }
             return;
         }
-        target.takeDamage(10);
+        try {
+            target.takeDamage(10);
+        } catch (DeadCharacterException e) {
+            throw new DeadCharacterException(target);
+        }
     }
 
     @Override

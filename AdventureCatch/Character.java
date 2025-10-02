@@ -54,7 +54,7 @@ public abstract class Character {
 
     public abstract void takeDamage(int damage) throws DeadCharacterException;
 
-    public abstract void attack(Character target);
+    public abstract void attack(Character target) throws DeadCharacterException;
 
     public static String printStatus() {
         if (allCharacters.isEmpty()) {
@@ -74,13 +74,13 @@ public abstract class Character {
         while (c1.getCurrentHealth() > 0 && c2.getCurrentHealth() > 0) {
             try {
                 c1.attack(c2);
-            } catch (Exception e) {
-
+            } catch (DeadCharacterException e) {
+                
             }
             if (c2.getCurrentHealth() > 0) {
                 try {
                     c2.attack(c1);
-                } catch (Exception e) {
+                } catch (DeadCharacterException e) {
 
                 }
             }
