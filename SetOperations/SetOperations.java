@@ -3,14 +3,9 @@ import java.util.Set;
 
 public class SetOperations {
     public static Set<Integer> union(Set<Integer> set1, Set<Integer> set2) {
-        Set<Integer> unionSet = new HashSet<>();
-        for (Integer num : set1) {
-            if (!set2.contains(num)) {
-                unionSet.add(num);
-            }
-        }
+        Set<Integer> unionSet = new HashSet<>(set1);
         for (Integer num : set2) {
-            if (!set1.contains(num)) {
+            if (!unionSet.contains(num)) {
                 unionSet.add(num);
             }
         }
