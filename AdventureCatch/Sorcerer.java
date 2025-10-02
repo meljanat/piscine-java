@@ -17,14 +17,14 @@ public class Sorcerer extends Character implements Healer {
             try {
                 target.takeDamage(this.getWeapon().getDamage());
             } catch (DeadCharacterException e) {
-                throw new e;
+                throw e;
             }
             return;
         }
         try {
             target.takeDamage(10);
         } catch (DeadCharacterException e) {
-            throw new e;
+            throw e;
         }
     }
 
