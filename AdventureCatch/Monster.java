@@ -9,14 +9,14 @@ public class Monster extends Character {
             try {
                 target.takeDamage(this.getWeapon().getDamage());
             } catch (DeadCharacterException e) {
-                throw new DeadCharacterException(target);
+                throw e;
             }
             return;
         }
         try {
             target.takeDamage(7);
         } catch (DeadCharacterException e) {
-            throw new DeadCharacterException(target);
+            throw e;
         }
     }
 
