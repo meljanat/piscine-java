@@ -1,9 +1,11 @@
 public class DeadCharacterException extends Exception {
+    private Character character;
+
     public DeadCharacterException(Character character) {
-        super(getMessage(character));
+        this.character = character;
     }
 
-    public static String getMessage(Character character) {
+    public String getMessage() {
         String type = "";
 
         if (character instanceof Sorcerer) {
