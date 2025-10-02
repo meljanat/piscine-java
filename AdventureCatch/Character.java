@@ -75,13 +75,13 @@ public abstract class Character {
             try {
                 c1.attack(c2);
             } catch (DeadCharacterException e) {
-                continue;
+
             }
             if (c2.getCurrentHealth() > 0) {
                 try {
                     c2.attack(c1);
                 } catch (DeadCharacterException e) {
-                    continue;
+
                 }
             }
         }
