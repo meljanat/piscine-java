@@ -1,6 +1,6 @@
 public class RegexReplace {
     public static String removeUnits(String s) {
-        return s.replaceAll("\\d+(cm|€)\\s*", "");
+        return s.replaceAll("\\d+(cm|€)\\s*", "\\d++");
     }
 
     public static String obfuscateEmail(String s) {
