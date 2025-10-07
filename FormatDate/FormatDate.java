@@ -37,7 +37,8 @@ public class FormatDate {
             return null;
         }
 
-        return DateTimeFormatter.ofPattern("HH:mm:ss.SSSSSSSSS").format(time);
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm:ss");
+        return time.format(formatter);
     }
 
 }
