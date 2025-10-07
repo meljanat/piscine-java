@@ -13,6 +13,10 @@ public class FormatDate {
 
         DateTimeFormatter dayMonthFormatter = DateTimeFormatter.ofPattern("d MMMM", Locale.FRENCH);
         String dayMonth = dateTime.format(dayMonthFormatter);
+        if (dayMonth.split(" ")[1].length() > 3) {
+            dayMonth = dayMonth.replace(dayMonth.split(" ")[1],
+                    dayMonth.split(" ")[1].substring(0, 3)) + ".";
+        }
 
         int year = dateTime.getYear();
 
