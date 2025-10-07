@@ -8,6 +8,6 @@ public class RegexMatch {
     }
 
     public static boolean containsAtLeast3SuccessiveA(String s) {
-        return s.matches(".*a{3,}.*");
+        return s.matches(".*A{3,}.*");
     }
 }
