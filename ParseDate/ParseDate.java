@@ -14,6 +14,9 @@ public class ParseDate {
     }
 
     public static LocalDate parseFullTextFormat(String stringDate) {
+        if (stringDate == null || stringDate.isEmpty()) {
+            return null;
+        }
         String[] parts = stringDate.split(" ");
         String dayOfWeek = parts[0].substring(0, 1).toUpperCase() + parts[0].substring(1).toLowerCase();
         String day = parts[1];
@@ -26,6 +29,9 @@ public class ParseDate {
     }
 
     public static LocalTime parseTimeFormat(String stringDate) {
+        if (stringDate == null || stringDate.isEmpty()) {
+            return null;
+        }
         int hour = Integer.parseInt(stringDate.substring(0, 2));
         if (stringDate.contains("evening")) {
             if (hour < 12)
