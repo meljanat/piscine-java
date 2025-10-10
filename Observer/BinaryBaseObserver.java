@@ -17,4 +17,5 @@ class BinaryBaseObserver implements NumericBaseObserver {
     public List<String> getEvents() {
         return events;
     }
+
 }
